@@ -1,8 +1,8 @@
 package com.example.datastorepreferences
 
 import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
@@ -10,7 +10,6 @@ import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.lifecycleScope
 import com.example.datastorepreferences.databinding.ActivityMainBinding
-import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 
@@ -27,8 +26,8 @@ class MainActivity : AppCompatActivity() {
         binding.btnSubmit.setOnClickListener {
             lifecycleScope.launch {
                 saveDataToDataStore(
-                    key = binding.tvKey.text.toString(),
-                    value = binding.tvValue.text.toString()
+                    key = binding.etKey.text.toString(),
+                    value = binding.etValue.text.toString()
                 )
             }
         }
@@ -36,9 +35,8 @@ class MainActivity : AppCompatActivity() {
         binding.btnGetValueForKey.setOnClickListener {
             lifecycleScope.launch {
                 binding.tvValueForKey.text =
-                    readDataFromDataStore(key = binding.tvKeyForValue.text.toString()) ?: "no value for this key"
+                    readDataFromDataStore(key = binding.etKeyForValue.text.toString()) ?: "no value for this key"
             }
-
         }
     }
 

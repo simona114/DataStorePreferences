@@ -9,7 +9,7 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/tvKey"
+        android:id="@+id/etKey"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter a key..."
@@ -18,13 +18,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/tvValue"
+        android:id="@+id/etValue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter a value..."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvKey" />
+        app:layout_constraintTop_toBottomOf="@id/etKey" />
 
     <Button
         android:id="@+id/btnSubmit"
@@ -33,10 +33,10 @@
         android:text="Submit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvValue" />
+        app:layout_constraintTop_toBottomOf="@id/etValue" />
 
     <EditText
-        android:id="@+id/tvKeyForValue"
+        android:id="@+id/etKeyForValue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -52,7 +52,7 @@
         android:text="Get value for key"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvKeyForValue" />
+        app:layout_constraintTop_toBottomOf="@id/etKeyForValue" />
 
 
     <TextView
